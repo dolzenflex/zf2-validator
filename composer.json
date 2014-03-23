@@ -1,0 +1,14 @@
+{
+    "name": "dolzenflex/zf2-validator",
+    "description": "Zend Framework 2 set of validators",
+    "require": {
+        "zendframework/zend-validator": "@stable",
+        "zendframework/zend-servicemanager": "@stable"
+    },
+    "authors": [
+        {
+            "name": "Ale Dolcini",
+            "email": "dolzenflex@gmail.com"
+        }
+    ]
+}
