@@ -6,3 +6,5 @@ composer.phar
 /build/
 phpunit.xml
 
+
+/vendor/
