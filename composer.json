@@ -2,13 +2,24 @@
     "name": "dolzenflex/zf2-validator",
     "description": "Zend Framework 2 set of validators",
     "require": {
+     	"php": ">=5.3.3",
         "zendframework/zend-validator": "@stable",
         "zendframework/zend-servicemanager": "@stable"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
     },
     "authors": [
         {
             "name": "Ale Dolcini",
             "email": "dolzenflex@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "Dolzenflex": "src/",
+            "DolzenflexTest": "tests/"
+        }
+        
+    }
 }
