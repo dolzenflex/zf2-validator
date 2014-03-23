@@ -1,5 +1,5 @@
 <?php
-namespace Cougar\Outbound\Import\Validator;
+namespace Dolzenflex\Validator;
 
 use \Zend\Validator\ValidatorChain;
 use \Zend\Validator\ValidatorInterface;
@@ -18,9 +18,9 @@ class ValidatorGroup extends ValidatorChain
             'instance' => $validator,
             'breakChainOnFailure' => false,
             'andOr' => $andOr,
-            'key' => $key,
-           
-        );
+            'key' => $key
+        )
+        ;
         return $this;
     }
 
@@ -30,9 +30,9 @@ class ValidatorGroup extends ValidatorChain
             'instance' => $validator,
             'breakChainOnFailure' => false,
             'andOr' => $andOr,
-            'key' => $key,
-           
-        ));
+            'key' => $key
+        )
+        );
         return $this;
     }
 
@@ -59,7 +59,7 @@ class ValidatorGroup extends ValidatorChain
             /*
              * chech if value is array and try to extract the configured key
              */
-            if ( is_array($value ) ) {
+            if (is_array($value)) {
                 if (isset($element['key']) && isset($value[$element['key']])) {
                     $keyValue = $value[$element['key']];
                 } else {
@@ -74,7 +74,6 @@ class ValidatorGroup extends ValidatorChain
              */
             $validator = $element['instance'];
             $isValid = $validator->isValid($keyValue, $context);
-                      
             
             /*
              * update the chain result
@@ -84,8 +83,7 @@ class ValidatorGroup extends ValidatorChain
             } else {
                 $results = $results || $isValid;
             }
-                      
-           
+            
             if ($isValid) {
                 continue;
             }
